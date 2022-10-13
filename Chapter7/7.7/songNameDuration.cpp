@@ -29,7 +29,7 @@ int main() {
 
     cin >> songName;
     while (songName != "quit") {
-        
+        test
     }
 
     for (i = 0; i < songs.size(); ++i) {
