@@ -29,7 +29,10 @@ int main() {
 
     cin >> songName;
     while (songName != "quit") {
-        
+        cin >> songDuration;
+        newSong.SetNameAndDuration(songName, songDuration);
+        songs.push_back(newSong);
+        cin >> songName;
     }
 
     for (i = 0; i < songs.size(); ++i) {
