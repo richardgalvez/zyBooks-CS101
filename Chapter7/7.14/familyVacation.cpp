@@ -28,9 +28,10 @@ FIXME: Overload + operator so can write newVacation = oldVacation + 5,
 FamilyVacation FamilyVacation::operator+(int moreDays) {
     FamilyVacation vacationTime;
 
-    FamilyVacation.numDays = numDays;
-    FamilyVacation.numPeople = numPeople + moreDays;
+    vacationTime.numDays = numDays + moreDays;
+    vacationTime.numPeople = numPeople;
 
+    return vacationTime;
 }
 
 void FamilyVacation::Print() const {
