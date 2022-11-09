@@ -35,10 +35,10 @@ int main() {
 
     cout << "Beginning tests." << endl;
 
-    redSweater.addInventory(sweaterShipment);
-    if (redSweater.getQuantityRemaining() != 25) {
-        cout << "   UNIT TEST FAILED: addInventory()" << endl;
-    }
+   redSweater.addInventory(sweaterShipment);
+   if (redSweater.getQuantityRemaining() != sweaterShipment){
+      cout << "   UNIT TEST FAILED: addInventory()\n";
+   }
 
     cout << "Tests complete." << endl;
 
