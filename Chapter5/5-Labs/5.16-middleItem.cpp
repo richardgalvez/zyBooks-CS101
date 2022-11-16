@@ -3,8 +3,9 @@
 using namespace std;
 
 /*
-Given a sorted list of integers, output the middle integer. Assume the number 
-of integers is always odd.
+Given a sorted list of integers, output the middle integer. 
+Assume the number of integers is always odd.
+
 Ex: If the input is:
 2 3 4 8 11 -1 
 
@@ -19,20 +20,25 @@ find the middle item.
 */
 
 int main() {
-    vector<int> intList(11);
+    vector<int> intList(9);
+    unsigned int i;
     int userInput;
     int middleNum;
-    unsigned int i;
 
-    for (i = 0; i < intList.size(); i++){
-        if (intList.at(i) > -1) {
-            
-        }
-            cin >> intList.at(i);
-        cout << intList.at(i) << " ";
+    cin >> userInput;
+
+    while ((userInput >= 0) && (i < intList.size()))
+        intList.at(i) = userInput;
+        cin >> userInput;
+        i++;
+
+    if (userInput >= 0) {
+        cout << "Too many inputs" << endl;
     }
-
-    cout << endl;
+    else {
+        middleNum = i /2;
+        cout << middleNum << endl;
+    }
 
     return 0;
 }
