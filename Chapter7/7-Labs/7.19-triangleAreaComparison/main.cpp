@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Triangle.h"
+#include <cmath>
 using namespace std;
 
 /*
@@ -25,15 +26,27 @@ int main(int argc, const char* argv[]) {
    Triangle triangle1;
    Triangle triangle2;
 
-   // TODO: Read and set base and height for triangle1 (use SetBase() and SetHeight())
-      
-   // TODO: Read and set base and height for triangle2 (use SetBase() and SetHeight())
-   
-   // TODO: Determine larger triangle (use GetArea())
-      
-   cout << "Triangle with larger area:" << endl;
+   double base1, height1, base2, height2;
+   cin >> base1;
+   cin >> height1;
+   triangle1.SetBase(base1);
+   triangle1.SetHeight(height1);
 
-   // TODO: Output larger triangle's info (use PrintInfo())
+   cin >> base2;
+   cin >> height2;
+
+   triangle2.SetBase(base2);
+   triangle2.SetHeight(height2);
+
+   cout << "Triangle with larger area:" <<endl;
    
+   if(triangle1.GetArea() > triangle2.GetArea()){
+      triangle1.PrintInfo();
+   }
+
+   else {
+      triangle2.PrintInfo();
+   }
+
    return 0;
 }
